@@ -1,0 +1,1 @@
+<a href="/product.php?id=<?php echo($product['id']); ?>">View <?= $product['name'] ?></a>
