@@ -1,12 +1,29 @@
 <?php
-    require_once "config.php";
+    require_once "header.php";
 
-    session_start();
-?><html>
-    <head>
-        <title>Uppgift 2</title>
-    </head>
-    <body>
+    if(isset($_GET['like'])) {
+        $id = 1*$_GET['like'];
+
+        if(!isset($_SESSION['likes'])) {
+            $_SESSION['likes'] = [];
+        }
+
+        $_SESSION['likes'][] = $id;
+    }
+
+    if(isset($_GET['removeLike'])) {
+        $id = 1*$_GET['removeLike'];
+
+        if(!isset($_SESSION['likes'])) {
+            $_SESSION['likes'] = [];
+        }
+
+        $new_likes = array_values(array_diff($_SESSION['likes'], [$id]));
+
+        $_SESSION['likes'] = $new_likes;
+    }
+?>
+Här börjar body
     <?php
         function fsu24d_say_hello($greeting = "Hello") {
             if(isset($_POST['name'])) {
@@ -109,6 +126,26 @@
                     <?php
                         require("button.php");
                     ?>
+                    <?php
+                        if(in_array($product['id'], $_SESSION['likes'])):
+                            ?>
+                                Liked <a href="?removeLike=<?= $product['id'] ?>">(Remove)</a>
+                            <?php
+                        else:
+                            ?>
+                            <a href="?like=<?= $product['id'] ?>">Like</a>
+                            <?php
+                        endif;
+                        
+                    ?>
+                    
+                    <form method="POST">
+                        <input type="hidden" name="action" value="like" />
+                        <input type="hidden" name="id" value="<?= $product['id'] ?>" />
+                        <button>
+                            Like
+                        </button>
+                    </form>
                 </div>
             <?php
             
