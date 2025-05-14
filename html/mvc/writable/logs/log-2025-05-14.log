@@ -1,0 +1,47 @@
+CRITICAL - 2025-05-14 08:55:30 --> ParseError: syntax error, unexpected token "return"
+[Method: GET, Route: newsletters]
+in APPPATH/Controllers/Newsletters.php on line 11.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/mvc/app/Controllers/Newsletters.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Newsletters')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Newsletters')
+ 4 SYSTEMPATH/CodeIgniter.php(885): class_exists('\\App\\Controllers\\Newsletters', true)
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-14 09:18:54 --> ArgumentCountError: Too few arguments to function App\Controllers\Newsletters::single(), 0 passed in /var/www/html/mvc/system/CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: newsletters/123]
+in APPPATH/Controllers/Newsletters.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Newsletters->single()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsletters))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-14 09:46:28 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: newsletters]
+in APPPATH/Models/Newsletters.php on line 4.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/mvc/app/Models/Newsletters.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Newsletters')
+ 3 APPPATH/Controllers/Newsletters.php(9): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Newsletters')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Newsletters->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsletters))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-14 10:02:35 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: newsletters]
+in APPPATH/Views/newsletters.php on line 10.
+ 1 APPPATH/Views/newsletters.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/var/www/html/mvc/app/Views/newsletters.php', 10)
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/mvc/app/Views/newsletters.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('newsletters', [], true)
+ 5 APPPATH/Controllers/Newsletters.php(11): view('newsletters', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Newsletters->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsletters))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
