@@ -29,7 +29,7 @@ class Database extends Config
         'hostname'     => 'db',
         'username'     => 'root',
         'password'     => 'notSecureChangeMe',
-        'database'     => 'newsletters',
+        'database'     => 'products',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

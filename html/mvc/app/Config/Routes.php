@@ -13,4 +13,4 @@ $routes->get('/sign-in/logged-out/', 'Message::index/signedOut');
 $routes->get('/my-account/', 'Message::index/signedIn');
 $routes->get('/no-access/', 'Message::index/noAccess');
 
-$routes->post('/login/', 'LoginController::login');
+$routes->post('/login/', 'Login::login');
