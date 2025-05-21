@@ -7,7 +7,8 @@
     }
 
     if(false) {
-        
+        echo("Something went wrong");
+        die();
     }
 ?>
 <html>
