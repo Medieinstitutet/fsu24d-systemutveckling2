@@ -5,6 +5,10 @@
     if(isset($_GET['signOut']) && $_GET['signOut'] == "1") {
         fsu24d_sign_out();
     }
+
+    if(false) {
+        
+    }
 ?>
 <html>
     <body>
