@@ -6,7 +6,8 @@
         fsu24d_sign_out();
     }
 
-    if(false) {
+    $has_error = false;
+    if($has_error) {
         echo("Something went wrong");
         die();
     }
